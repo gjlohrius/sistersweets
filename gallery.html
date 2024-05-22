@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <script src="extrastuff.js"></script>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+  </head>
+<body>
+  <!--start of nav bar-->
+  <nav class="navbar navbar-expand-lg navBar">
+    <div class="container-fluid">
+      <a class="navbar-brand">Sister Sweets</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="review.html">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutLucy.html">About Lucy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+        <!--End of carosel-->
+        <!--Start of menu-->
+        <div class="container">
+          <div class="row">
+              <div id="spinnyWheel" class="col-md-12">
+                
+                <div class="container">
+                  <div class="spinBtn" style=color:white>click</div>
+                  <div class="wheel">
+                    <div class="pastry" style="--i:1;--clr:#FF7F50"><span>Cupcake</span></div>
+                    <div class="pastry" style="--i:2;--clr:#FC9F7E"><span>Cake</span></div>
+                    <div class="pastry" style="--i:3;--clr:#FFCCBA"><span>Cookie</span></div>
+                    <div class="pastry" style="--i:4;--clr:#FF7F50"><span>Crinkle</span></div>
+                    <div class="pastry" style="--i:5;--clr:#FC9F7E"><span>Cake</span></div>
+                    <div class="pastry" style="--i:6;--clr:#FFCCBA"><span>Cookie</span></div>
+                  </div>
+                </div>
+                <script>
+                  let wheel=document.querySelector(".wheel");
+                  let spinBtn=document.querySelector(".spinBtn");
+                  let value=Math.ceil(Math.random()*3600);
+                  
+                  spinBtn.onclick=function(){
+                    wheel.style.transform="rotate(" +value+ "deg)"
+                    value+=Math.ceil(Math.random()*3600);
+                  }
+                </script>              
+
+              </div> 
+          </div>
+          <div class="row">
+              <div class="col-md-7"><!--add id=”cookies”-->
+              <!--Cookie carosuel-->
+              <div id="cookieDisplay" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDxUQERIQEhAVFRAVEBITEhAPEBASFRUXFxURExcYHSggGBolGxUTITEiJSkrMC4uGB8zODMtNygtLisBCgoKDg0OGhAQGy8lICUtLS0vMDUtLS8tLi0tKy0tLS0uLi0tLS0vLS0tLS0tLTUwLTUtLS0tLS0rLy0tLS0rLf/AABEIAOEA4QMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABAUBAgMGB//EADgQAAIBAwEGAwQJBAMBAAAAAAABAgMEESEFEjFBUWEicYGRobHRBhMyQlJyweHwI2KCkhUzUxT/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBAUG/8QALREBAQACAgIBAwEIAgMAAAAAAAECAxEhBDESIkFRYQUyQnGBkaHw0eETUrH/2gAMAwEAAhEDEQA/APuIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIVxtWhDjNN9I5l6aGGflasPdbYePsy9Rwp7eoSePH/q38DGefp59/wCGl8PZJysadSMlmLyjqwzxznON5c+WNxvFbl1QAAAAAAAAAAAAAAAAAAAAAAAAAAIdxtCEc48TXHHBepx7vN16/Xdb4ePll+jzO1Nr1Km9FPEVxSeI+T6vseNu8rbuv1XifiPT0+Phh3x2g26c+LxFcEc9yb3pMw44UNFzejk30eSZnIzs59rC3rzjiX2XzWc+hvr25arzGGeGOXVW1vcbyye7r2fLGZfl5+eHxtiVCZtKzsdCyoAAAAAAAAAAAAAAAAAAAAAByuLiMFmT9ObMtu/DVOcqvhryzvEUN/tOVTMVlR5pcX5vkeF5Pn57fpx6n++3pafGxw7vtWSy1hZenBaLQ863nqOvqdoUqMuMotR5LHhXctbZF5Z+U23pprPHryRTHtTK2JKlGGsml7fcuZvrnfLLLmoV5tRN4hnX2v0N5quy8RHWE5q52VJqKz2PbwnEkjzs7zbVzTN8WNd0aKMgAAAAAAAAAAAAAAAAAAAArL3aqWY09Xzl91eXU8zyP2hJ9Oru/n7f9uzV4tveanrVG9ZNtvi+bfRHibtlyy5yrvwxk9RGzjMc8dX27GPy4nDXjntvbYy+vBFtXHaufKBUuMze820m9F4l6ch8MsmnWMaV75xWmIR7vLZvr0c9TtncpO6g/WVKj8OfzS/RfM9DX4n/ALOfPf8Aha7M2XuveeXLq+P7HbjjMZxI5cs7fb0dnQwa4xlasqUTbGMq7ouqAAAAAAAAAAAAAAAAAADSrVjBZk8L49kU2bMdc+WVWxxuV4jzu1drOT3I5S6Li/U8Dy/Nz2/Tj1HqeP40w+q+1VO6ws4bws7q5/M5ccL6vp0VvGo54esV70Y3DLK8rdRrcXNOCw3r/bhvJeaefsrzVdK9f4n2xo/d+xvq8W+5EZbJHBuc+GV35/z2ndh4s/iYZbvwk22zcvMst9XqzrxxknEc+WfK6tbJLkXkZ2re2tTTHFnck+nTNJFLXaKLqNiQAAAAAAAAAAAAAAAAAI95eQpLMnryXUw378dU5vv8NderLZenlLvaU60sp8dEtUo445Pn/I3Z7cucnratOOvHpinUWHF/a59/27GHH4XqHdXMVo/FL7sVrJfI0x13I54YnQrOO9P+lDo/tP04+3B26/Fv36c+W7H7doP/AM2Xpn15nTjpxil22pVCxNZGVyWVvZdi3Clqyt7TsWkUtWNC2waTFS5JcIGsilrokWVZAAAAAAAAAAAAAAAAAAFRtLbUYZjT8U1z+6vmzzfK/aGOv6cO7/if8u3R4ly7y6jzFxe/WRxKTcuMs8c5x7jyMtmWV5yvL0sdcx9RtVgqccprEsZ4L1KnPNSrLZFWvrrCn+JrGV25v4dzu8fw88+/Uc23yccOvdWitaFrHFOKc+cnhv8AY9GasNXru/lxXZns9+lTcRc3mRF7WnTNK17Dg5T6FoWkVtWFC0LzFS5JkKSRrMVLXVRLcK8tkiUMgAAAAAAAAAAAAAAAAEa8vqdJeJ68orWT/ncw3eTr1fvX+n3a69Oez1Hmbn6QTqtJeGD5J5bWvF8+Wh5XkeXnnbPUejq8XHCc+6hUdZPLWOL8jz8uHVemXY/XyUKaba5rgu7b4F9Hj555fTP9/VTPdMJzkvrDYNChidTFSouDl4lH8qfx+B7ejxMNU5y7v+Hm7fJz2dTqO9zft6R0Rvls59MccEBwbZnxy0daduTwjlLo2haYq3JMp0UjSYqWuyiX4V5bJEoZAAAAAAAAAAAAAAbA4zu6a4zgv8kZZb9ePvKf3aTVnfUqHU27bR038+UZY9uMGGXn6J/F/itZ4m2/ZDn9JYN4pwlJ68Wo+5Zyc+f7Tx4+jH+/+1tj4GX8VVd59IKspbuVFNZW7pw4pvic187Ztnvj+Tox8TXh+qJWq6cdePuZw2/J1ScIFHdinUylBT01zy1S9pa29T7ix2Zazunvv+jQX3n/ANlT8iei/Mzt8fw5l9WXpybvI+HU9vSRuqVGG5RWnXi2+rb1b7nqy44T44R59mWV5yRnOU3llLbVuJHWnQJmKLUmna+heYq3JKp0Ei8xVtdVEtwry2wShkAAAAAAAAAAAAMSkkstpLm3okRbJOamS3qKbaH0loUtF45dtF7Tg2ftDCda58v/AJ/d16/Czy7y6ecvfpZXnpBxprssv2nDn5u/L9P5f9u3Dw9WPvtU1dp1pP8AqVJS83j4HNllcv3ra6cdeOPqcEK8vxPHn8ynxn2S6OEsqUZSXXD0ffD0yXx4s+Nit/LvZbyqvexhxzFrTosNDLCfHpHN9F3FtZX2km10fn7zLX1VqxtCrinJf249XokXwnNlQh2FFyw56wTbjDk31fX+cuPo6dMt+Vcm3bx1HoadSUuL8lwSO1xptCl1JkRasre3z2LzFnanU6SRpIpa6qJbhHLOCUMgAAAAAAAAAAAAArdq7Zp261eZfhX6nH5HmYavpneX4/5dOnxstnfqPIX22atd6vdjyS0wePt3Z7bznf6fZ6mrRhrn0oborBl39mrk6fIi8pjlWoafxk45SlbW1LEt3k1pzwytv3SsqMfB6/z3l8f32ddVDg+ajJm87lU+6LWljw+Tk+nNR9yOa9W3+zSdoNxU+sluL7C+1/c+51+Lo+V+WTHfs+M4iztKR6kjz7V1aW5MUtW9vbYNJFLU2EDSRna6JFkMgAAAAAAAAAAAAAAUe3Ns/Vpwpvxc308jzfK8zi/DX/Wu7xvG5+rN4tyc23Jts8rOcPTxIRKpSbejLnwJuU+yG8rfDz24Ec8iNOOcLmZ8WXmr8t6VB5TfHn2Ql5vXpFvSXjTHBLj3fRFsbx2pXRPi3/McIm0y4ivCo2hPw5y8yzuYWMvnJ/IjXhc8+ItllMceWdm22h7OOPxnEeZnlzea9DZ2xeRlavLWhuo0mKlqdTiaSKV1RZVkAAAAAAAAAAAAAACBtm6dOl4ftS0Xbq/51OPzt11avp93p0eLrmeffqPF1m3q+efM8CZcPZ4cFRXHmTc+U8O1K2fHgTyi1JjTxzQ6iOWKkM9fPgVuchGsaXPHzMu8u6tzwN6/p82W/SIMY1folyLzoRr+4VOOZYz92HBy9OhpjjlneMVblJ7VsZSrVN+XklyiuiR6mjTNeP6uHbs+V69L/Z9udMc9r0dhb8zTGM8qsY0zThTl1iiVWSQAAAAAAAAAAAAAAApPpXJwoqqlncfi54UtN7249pwftDVc9cs+zs8POTOy/d5mjdxqLOjXZrB4Vxs6r1f5Oyj0g37yLPwjn810Sl+FrzaRF5Om31Pl/sV+EPk13UuLj8fiT8ZPRySSf4n24L3E/C054c6lWnBeOcYe+XojTHXlVbkqL7bkI+GktfxSWZekeC9Tq1+N8meezj2rqVOdSW9PLb66+3qehr1zCdOTPO5L2wtTWM7XobGhwReRnavqEEkbRlXcsqAAAAAAAAAAAAAAAAAGtSCknGSTi0009U0+KYs5JeHhNsfQWpGo61lUcXx+rbaw/wC2XNavj7Ti2+LMp07NXlcfvKqtHadJYnCfm6e+l/lHRnm5+FJfVduO/HL7xGltm7j9qEf9Z/BszvjYz71pM0GW1rvOXuSWujjKP6l//DrPnY0lta4/9FHt/Tjjy0yXx04/aK3P81xqbTqPR1Kk/Vpe/HwNsdNv2kZ3ZjGKaqTf4V24+1/pg2x04z32yy22+ljZ7Pxy1NWK8s7MlFq7tLUtIpaurW3wjSRnamwiaRSuhKAAAAAAAAAAAAAAAAAAAAOVysxK5elsfbzu24vcaObON8K8BXs8tmPDo+TktnroXkVuSVR2euhZRYW9l2AtLayJ4VtW1ra9EWkUtW9tbJGsilqZCJeRS10JQAAAAAAAAAAAAAAAAAAAAA0qrQipim2nQyjHKNca8rc2LzwMrGsrSFmODlLo2RPCOU+hZ9iZFbVnb2ReYq2rGlQSNJFLUiMSyrclAAAAAAAAAAAAAAAAAAAAAABhgR61PJSxaVBqWKZT4r/Jy/49EfFPydYWKJ+KPkk0rZLkWmKtqTCBbhHLokSqySAAAAAAAAAAAAAAAAAAAAAAAABq4kDG4OE8m4ODk3BwcsqIQ2JAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB//2Q==" class="d-block w-100" alt="cookie1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="cookie2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev buttoncolor" type="button" data-bs-target="#cookieDisplay" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next buttoncolor" type="button" data-bs-target="#cookieDisplay" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              </div> 
+              <!--After carosusel, add text detailing the cookies below-->
+          </div>
+          <div class="row">
+              <div class="col-md-7"> <!--add id=”cupcakes”-->
+              <!--cupcake carosuel-->
+              <div id="cupcakeDisplay" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#cupcakeDisplay" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cupcakeDisplay" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div> 
+          </div>
+          <div class="row">
+              <div class="col-md-7"> <!--add id=”seasonal"--></div> 
+          </div>
+      </div>
+      <!--End of menu-->
+      <footer>Rose, Hannah, Gracie, Sophia</footer>
+</body>
+</html>

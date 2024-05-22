@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Make your Review</title>
+  <script>
+      review1.textcontent="form"
+      fetch('form')
+  </script>
+     
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ 
+     <link rel="stylesheet" href="main.css">
+  <nav class="navbar navbar-expand-lg navBar">
+    <div class="container-fluid">
+      <a class="navbar-brand">Sister Sweets</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="review.html">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutLucy.html">About Lucy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</head>
+<body>
+  <h3> leave a review!<h3>
+    <p>
+      type in your name in email in the boxs below, then type in yours review
+    </P>
+    
+    <form>
+      <input id="name" type="text">
+      <input id="email" type="text">
+      <input id="review" type="text">
+      <input id="checkout" type="button" value="CLICK ME!" onclick=displayparts()>
+    </form>
+    
+    <p id"first Statment">
+      ours customer<b><span id="name1">___</span></b> , <b><span id="email1">___</span></b> left this review: <b><span id="review1">____</span></b>
+    </p>
+    
+    <script>
+      
+      // start of greater num 
+      function greaterNum(namef,emailf,reviewf){
+        let name1= document.getElementById("name1")
+        let email1= document.getElementById("email1")
+        let review1= document.getElementById("review1")
+        name1.innerHTML=namef
+        email1.innerHTML=emailf
+        review1.innerHTML=reviewf
+        
+        //if(namef>num2){
+          numGreat.innerHTML=namef
+       // }
+        //else{
+          numGreat.innerHTML=emailf
+        //}
+          numGreat.innerHTML=reviewf
+          
+      }
+      
+      function displayparts(){
+        let namef =document.getElementById("name").value
+        let emailf = document.getElementById("email").value
+        let reviewf = document.getElementById("review").value
+        greaterNum(namef,emailf,reviewf)
+      }
+      
+      document.getElementyId("checkout").onclick=displayparts
+      // end of greater num
+      
+      
+    </script>
+                     
+
+
+</body>
+</html>
