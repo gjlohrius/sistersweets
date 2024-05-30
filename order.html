@@ -42,82 +42,94 @@
       </div>
     </div>
   </nav> 
-  <div class="row">
-      <div class="col-md-4">
-        <h2> <u>Basics:</u> </h2>
-        <p> 
-          <ul class="list-group">
-            <li class="list-group-item">vanila cupcakes</li>
-            <li class="list-group-item"> choclate cupcake</li>
-            <li class="list-group-item">  redvelvet cupcake</li>
-            <li class="list-group-item">vanila cake</li>
-            <li class="list-group-item">choclate cake</li>
-            <li class="list-group-item">redvelvet cake</li>
-            <li class="list-group-item">choclatechip cookies</li> 
-            <li class="list-group-item">suger cookies </li>
-          </ul>
-        </p>
-      </div>
-      
-      <div class="col-md-4">
-        <h2> <u>Special designs:</u> </h2>
-        <p> (all of these can come in forms of cookies, cakes and cupcakes!)</p>
-        <p> 
-          <ul class="list-group">
-            <li class="list-group-item">christmas! </li>
-            <ol>
-              <li> christmas tree </li>
-              <li> snowmen </li>
-              <li> santa </li>
-              <li> snowflakes </li>
-            </ol>
-            <li class="list-group-item">christmas! </li>
-            <ol>
-              <li> christmas tree </li>
-              <li> snowmen </li>
-              <li> santa </li>
-              <li> snowflakes </li>
-            </ol>
-            <li class="list-group-item">christmas! </li>
-            <ol>
-              <li> christmas tree </li>
-              <li> snowmen </li>
-              <li> santa </li>
-              <li> snowflakes </li>
-            </ol>
-
-          </ul>
-        </p>
-      </div>
-      
-      <div class="col-md-4">
-        <h2><u> Customize Your Order</u> </h2>
-        <p> 
-        <ul class="list-group">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          <li class="list-group-item">A fourth item</li>
-          <li class="list-group-item">And a fifth one</li>
-        </ul>
-        <br>
-        <ul class="list-group">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          <li class="list-group-item">A fourth item</li>
-          <li class="list-group-item">And a fifth one</li>
-        </ul>
-        <br>
-        <ul class="list-group">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          <li class="list-group-item">A fourth item</li>
-          <li class="list-group-item">And a fifth one</li>
-        </ul>
-      </p>
+  <div class="container-fluid">
+    <div class="row test">
+        <div class="col-md-6"> <!--Google form start, prices, 1 cake - $60, 2 cakes do 60x2, etc.-->
+          <form action="" method="get">
+            <fieldset class="border border-dark p-3">
+              <legend class="float-none w-auto px-3">Enter an Order!</legend>
+              <label>
+                Name (Last, First):
+                <br>
+                <input type="text" name="">
+              </label>
+              <br><br>
+              <label>
+                Email:
+                <br>
+                <input type="email" name="email">
+              </label>
+              <br><br>
+              <label> 
+                What do you want?
+              </label>
+              <select name="referral" id="orderWant">
+                <option value="cake"> Cake - $30.00</option>
+                <option value="cookie" > Cookies - $2.00 </option>
+                <option value="brownies"> Brownies - $2.00</option>
+                <option value="cupcakes"> Cupcakes - $3.00</option>
+                </select>
+              <br><br>
+              <label>
+                How many would you like?
+                <br>
+                <input type="number" id="howMany">
+              </label>
+              <br><br>
+              <label>
+                What would you like?
+                <br>
+                <textarea rows="2" cols="40" id="enterOrder"></textarea>
+              </label>
+              <br><br>
+              <label>
+                Any allergies?
+                <br>
+                <textarea rows="1" cols="40" id="allergies"></textarea>
+              </label>
+              <br><br>
+              <input type="submit" value="Submit Order" onclick="sendTheOrder()">
+              <p>The total price of your order will be<b><span id="numTotal"></b></span></p>
+            </fieldset>
+          </form>
+          <form action="https://formsubmit.co/hannahkdao@gmail.com" method="POST">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="name" required>
+            <input type="email" name="email" required>
+            <button type="submit">Send</button>
+          </form>
+        </div> <!--Google form end-->
+        <div class="col-md-4"> 
+          <script>
+            function orderCalculate(num1){
+              var item
+              var orderr= document.getElementById("orderWant");
+              var value=orderr.options[orderr.selectedIndex].value
+              if(value== "cake"){
+                item=30;
+              }
+              else if(value=="cookie"){
+                item=2;
+              }
+              else if(value=="brownies"){
+                item=2;
+              }
+              else if(value=="cupcakes"){
+                item=3
+              }
+              var numTotal = document.getElementById("numTotal");
+              var textt= num1*item
+              document.getElementById("numTotal").textContent = textt;
+              
+            }
+            function sendTheOrder(){
+              let num1 = parseInt(document.getElementById("howMany").value)
+              orderCalculate(num1)
+            }
+          </script>
+        </div> 
     </div>
+  </div>
 </div>
 </body>
 </html>
