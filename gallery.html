@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
   </head>
 <body>
@@ -42,22 +42,51 @@
       </div>
     </div>
   </nav>
-
-        <!--End of carosel-->
         <!--Start of menu-->
-        <div class="container">
-          <div class="row">
-              <div id="spinnyWheel" class="col-md-12">
+        <div class="container-fluid">
+            <table class="table col-md-6">
+              <tbody>
+                <tr>
+                  <td><img src="media/sugarCookie.jpeg" alt="chocolateCookies" class="imgSize"></td>
+                  <td></td>
+                  <td><img src="media/cookieCake.jpeg" alt="cookie cake" class="imgSize"></td>
+                </tr>
+                <tr>
+                  <td><img src="media/oreoCake.jpeg" alt="oreo cake" class="imgSize"></td>
+                  <td><img src="media/sliceCake.jpeg" alt="banana bread" class="imgSize"></td>
+                  <td><img src="media/oreoCupcakes.jpeg" alt="oreo cupcakes" class="imgSize"></td>
+                </tr>
+                <tr>
+                  <td><img src="media/mmCup.jpeg" alt="m and m cupcakes" class="imgSize"></td>
+                  <td><img src="media/swirlCup.jpeg" alt="swirl cupcakes" class="imgSize"></td>
+                  <td><img src="media/rainbowCup.jpeg" alt="rainbow cupcake" class="imgSize"></td>
+                </tr>
+                <tr>
+                  <td><img src="media/pinkCup.jpeg" alt="pink cupcakes" class="imgSize"></td>
+                  <td><img src="media/monsterCup.jpeg" alt="christmas cupcakes" class="imgSize"></td>
+                  <td><img src="media/christmasCup.jpeg" alt="christmas cupcakes" class="imgSize"></td>
+                </tr>
+                <tr>
+                  <td><img src="media/christmasBrownie.jpeg" alt="peppermint brownies" class="imgSize"></td>
+                  <td><img src="media/halloweenCooks.jpeg" alt="halloween cookies" class="imgSize"></td>
+                  <td><img src="media/riceCrispy.jpeg" alt="rice krispies" class="imgSize"></td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <!--Spinny wheel start-->
+            <div class="row">
+              <div id="spinnyWheel" class="col-md-4">
                 
                 <div class="container">
-                  <div class="spinBtn" style=color:white>click<br>to<br>spin!</div>
+                  <div class="spinBtn" style=color:white>click</div>
                   <div class="wheel">
-                    <div class="pastry" style="--i:1;--clr:#FF7F50"><span>Cupcake</span></div>
-                    <div class="pastry" style="--i:2;--clr:#FC9F7E"><span>Cake</span></div>
-                    <div class="pastry" style="--i:3;--clr:#FFCCBA"><span>Frosted<br>Cookie</span></div>
-                    <div class="pastry" style="--i:4;--clr:#FF7F50"><span>Crinkle<br>Cookie</span></div>
-                    <div class="pastry" style="--i:5;--clr:#FC9F7E"><span>Cupcake</span></div>
-                    <div class="pastry" style="--i:6;--clr:#FFCCBA"><span>Chocolate<br>Cookie</span></div>
+                    <div class="pastry" style="--i:1;--clr:#FF7F50"><span>🧁Cupcake</span></div>
+                    <div class="pastry" style="--i:2;--clr:#FC9F7E"><span>🍰Cake</span></div>
+                    <div class="pastry" style="--i:3;--clr:#FFCCBA"><span>🍪Cookie</span></div>
+                    <div class="pastry" style="--i:4;--clr:#FF7F50"><span>🍋Bar</span></div>
+                    <div class="pastry" style="--i:5;--clr:#FC9F7E"><span>🍫Brownie</span></div>
+                    <div class="pastry" style="--i:6;--clr:#FFCCBA"><span>🍌Bread</span></div>
                   </div>
                 </div>
                 <script>
@@ -70,40 +99,13 @@
                     value+=Math.ceil(Math.random()*3600);
                   }
                 </script>              
-
-              </div> 
-          </div>
-          <div class="row"> <!--Put photos of cookies here-->
-              <div class="col-md-3">
-                </div>
-                <div class="col-md-3">
-
-                </div>
-                <div class="col-md-3">
+                
+          
+              <div class="col-md-7"><!--cake photos-->
               </div>
-              
-             
-              <!--After photos, add text detailing the cookies below-->
-              </div>
+              <!--Add description for the cakes, either next to it or below, whatever works better-->
+            </div>
+          <!--end of spinny wheel-->
           </div>
-          <div class="row"> <!--add photos of cupcakes here-->
-              <div class="col-md-3"> 
-                </div>
-              <div class="col-md-3">
-
-              </div>
-              <div class="col-md-3"></div>
-              <!--add text detailing the cupcakes here-->
-          </div>
-          <div class="row">
-              <div class="col-md-3"> <!--add seasonal treats here-->
-              </div>
-              <div class="col-md-3"></div>
-              <div class="col-md-3"></div>
-             <!--add details of seasonal treats here-->
-          </div>
-      </div>
-      <!--End of menu-->
-      <footer>Rose, Hannah, Gracie, Sophia</footer>
 </body>
 </html>
